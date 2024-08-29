@@ -7,8 +7,7 @@ export default async function SearchPage({ params }) {
   );
   if (!API_KEY) {
     throw new Error('Missing API_KEY environment variable');
-  }
-  
+  }  
   const data = await res.json();
   const results = data.results;
   return (
